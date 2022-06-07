@@ -39,7 +39,7 @@ function elegirPagina(){
         else{
             alert ("La respuesta es invalida. Vuelva a ingresar una opción")
         }
-        let tipoPagina = Number ( prompt ( "Escribe 1 = E-commerce, 2 = E-learning y 3 = Estática. Para salir presione ESC" ) )
+        tipoPagina = Number ( prompt ( "Escribe 1 = E-commerce, 2 = E-learning y 3 = Estática. Para salir presione ESC" ) )
 
     }
 

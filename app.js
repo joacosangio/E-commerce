@@ -1,5 +1,3 @@
-// Aca van a ir los datos ya planteados para el programa
-
 
 // let precioHora = 1520
 
@@ -7,17 +5,7 @@ let precioEcommerce = 210000
 let precioElearning = 210000
 let precioEstatica = 190000
 
-// Estas serian las declaraciones de las variables para la funcion elegriSkills()
-let incluirJs = ""
-let incluirScss = ""
-let incluirReact = ""
-let incluirNodeJs = ""
-
-
-// Aca voy a definir las funciones del programa en base a los datos del usuario y los ya planteados
-
-
-
+// FUNCIONES
 function elegirPagina(){
     alert("Elige el tipo de pagina que quieres de las siguientes opciones.")
 
@@ -45,6 +33,35 @@ function elegirPagina(){
 
 
 }
+
+function Cliente(nombre, apellido, dni, nacionalidad, email, telefono, ){
+    this.nombre = nombre
+    this.apellido = apellido
+    this.dni = dni
+    this.nacionalidad = nacionalidad
+    this.email = email
+    this.telfono = telefono
+    
+    
+}
+
+function crearCliente(){
+    let nombre = prompt("Ingrese su nombre")
+    let apellido = prompt("Ingrese su apellido")
+    let dni = Number( prompt ("Ingrese su DNI") )
+    let nacionalidad = prompt("Ingrese su nacionalidad")
+    let email = prompt("Ingrese su email")
+    let telefono = Number ( prompt ("Ingrese su telefono") )
+    
+
+    const cliente = new Cliente(nombre, apellido, dni, nacionalidad, email, telefono)
+    return cliente
+}
+// FUNCIONES
+
+
+crearCliente()
+console.log(cliente)
 
 elegirPagina()
 

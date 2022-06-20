@@ -22,7 +22,7 @@ button {
   width: 80px;
   border-radius: 30px;
   border: #ff7c00 solid 2px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: bold;
   text-align: center;
   font-family: 'Dancing Script', cursive; }
@@ -40,12 +40,28 @@ a {
 a:hover {
   color: #fff; }
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
+
+header .container {
+  display: flex; }
+
+.navbar {
+  display: flex;
+  flex-direction: column; }
+
+.navbar a {
+  padding: 1em; }
+
 #hero {
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: 90vh;
+  height: 100vh;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../MULTIMEDIA/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -62,3 +78,7 @@ a:hover {
 
 #hero p {
   font-size: 1.10rem; }
+
+.flecha-hero {
+  font-size: 3rem;
+  transform: translateY(6em); }

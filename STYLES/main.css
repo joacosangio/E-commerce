@@ -1,3 +1,11 @@
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  background-color: #000;
+  color: #fff; }
+
 .logo {
   height: 70px;
   width: 70px;
@@ -7,3 +15,50 @@
 .logo:hover {
   transform: scale(1.1);
   transition: all ease-in-out 0.5s; }
+
+button {
+  color: #ff7c00;
+  background-color: #000;
+  width: 80px;
+  border-radius: 30px;
+  border: #ff7c00 solid 2px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Dancing Script', cursive; }
+
+button:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.5s; }
+
+a {
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ff7c00; }
+
+a:hover {
+  color: #fff; }
+
+#hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 90vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../MULTIMEDIA/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 1em; }
+
+#hero h1 {
+  font-size: 3rem;
+  font-family: 'Bebas Neue', cursive; }
+
+#hero h1 strong {
+  color: #ff7c00;
+  font-weight: bold; }
+
+#hero p {
+  font-size: 1.10rem; }

@@ -1,13 +1,26 @@
+let tipoPagina
 
-// let precioHora = 1520
+ecommerce = {
+    precio: 230000,
+    tiempo: "Elevado",
+    complejidad: "Elevada"
 
-let precioEcommerce = 210000;
-let precioElearning = 210000;
-let precioEstatica = 190000;
+}
 
-const listaClientes = [
+elearning = {
+    precio: 210000,
+    tiempo: "Elevado",
+    complejidad: "Media"
+}
 
-];
+estatica = {
+    precio: 190000,
+    tiempo: "Medio",
+    complejidad: "Sencilla"
+}
+
+const listaClientes = []
+
 
 
 
@@ -51,23 +64,21 @@ console.log(cliente1)
 // Esta funcion no la muestro todavia porque quiero que sea tocar un boton. Ya que, no deberia preguntarle al usuario asi por que si
 // Averiguar como se hace por ID
 function eliminarCliente(){
-    let dejaDeSerCliente = prompt("¿Usted desea dejar de ser nuestro cliente?");
-    if (dejaDeSerCliente === "Si"){
+    let dejarDeSerCliente = prompt("¿Usted desea dejar de ser nuestro cliente?");
+    if (dejarDeSerCliente === "Si"){
         prompt("¿Podrias comentarnos el por qué? Nos ayudaria mucho para mejorar!");
     }
-    else if (dejaDeSerCliente == "No"){
+    else if (dejarDeSerCliente == "No"){
         alert("Gracias por seguir confiando en nosotros!");
     }
     else{
         alert("Respuesta invalida ¿Que desea hacer?");
     }
-    dejaDeSerCliente = prompt("¿Usted desea dejar de ser nuestro cliente?");
-    listaClientes.unshift ()
-    // ¿Que deberia ir entre los parentesis de unshift?
+    dejarDeSerCliente = prompt("¿Usted desea dejar de ser nuestro cliente?");
+    listaClientes.shift ()
+    // ¿Que deberia ir entre los parentesis de shift?
 }
 
-
-// FUNCIONES
 
 function elegirPagina(){
     do{
@@ -75,7 +86,7 @@ function elegirPagina(){
     
         alert("Los tipos de paginas disponibles son los siguientes: E-commerce -- E-learning -- Estática");
     
-        let tipoPagina = Number ( prompt ( "Escribe 1 = E-commerce, 2 = E-learning y 3 = Estática. Para salir presione ESC" ) );
+        tipoPagina = Number ( prompt ( "Escribe 1 = E-commerce, 2 = E-learning y 3 = Estática." ) );
             if (tipoPagina == 1){
                 alert("Usted eligió E-commerce. El precio promedio para una página E-commerce es de: $" + precioEcommerce );
             }
@@ -88,11 +99,20 @@ function elegirPagina(){
             else{
                 alert ("La respuesta es invalida. Vuelva a ingresar una opción");
             }
-            tipoPagina = Number ( prompt ( "Escribe 1 = E-commerce, 2 = E-learning y 3 = Estática. Para salir presione ESC" ) );
-    }while(tipoPagina != "ESC"){
-    
-    }
+        
+        alert("Elige el tipo de pagina que quieres de las siguientes opciones.");
+
+        alert("Los tipos de paginas disponibles son los siguientes: E-commerce -- E-learning -- Estática");
+
+        tipoPagina = Number ( prompt ( "Escribe 1 = E-commerce, 2 = E-learning y 3 = Estática." ) ); 
+        
+        }while(tipoPagina != 1 && tipoPagina != 2 && tipoPagina !=3){
+        }
 }
+
+
+// FUNCIONES
+
 
 elegirPagina();
 

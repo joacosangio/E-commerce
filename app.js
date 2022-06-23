@@ -158,9 +158,15 @@ function elegirPagina(){
 // FUNCIONES
 
 
-elegirPagina();
+// elegirPagina();
 
+const btnpres = document.querySelector("#btn-presupuesto")
 
+btnpres.addEventListener("click", elegirPagina)
+
+const btncliente = document.querySelector ("btn-cliente")
+
+btncliente.addEventListener ("click", crearCliente)
 
 
 

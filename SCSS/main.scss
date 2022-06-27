@@ -1,3 +1,6 @@
+@import "variables";
+
+
 // ------------Generales-----------------
 *:after {
     padding: 0;
@@ -10,9 +13,9 @@ html{
 }
 
 body {
-    font-family: 'Varela Round', sans-serif;
-    background-color: #000;
-    color: #fff;
+    font-family: $body-font;
+    background-color: $main-color;
+    color: $details-color;
     scroll-behavior:smooth;
 }
 
@@ -29,15 +32,15 @@ body {
 }
 
 button {
-    color:#ff7c00 ;
-    background-color: #000;
+    color:$second-color ;
+    background-color:$main-color;
     width: 80px;
     border-radius: 30px;
-    border: #ff7c00 solid 2px;
+    border: $second-color solid 2px;
     font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
-    font-family: 'Dancing Script', cursive;
+    font-family: $button-font;
 }
 
 button:hover {
@@ -46,15 +49,15 @@ button:hover {
 }
 
 strong {
-    color: #ff7c00;
+    color: $second-color;
     font-weight: bold;
 }
 
 a {
-    font-family: 'Kanit', sans-serif;
+    font-family: $a-font;
     font-weight: bold;
     text-decoration: none;
-    color: #ff7c00;
+    color: $second-color;
     position: relative;
     width: fit-content;
 }
@@ -65,7 +68,7 @@ a {
 .navbar a:after {
     content: "";
     position: absolute;
-    background-color: #ff7c00;
+    background-color: $second-color;
     height: 3px;
     width: 0;
     left: 0;
@@ -79,7 +82,7 @@ a {
 }
 
 a:hover {
-    color: #fff;
+    color: $details-color;
 }
 
 header {
@@ -102,7 +105,7 @@ header .container {
 }
 
 .navbar a {
-    padding: 1em;
+    padding: $common-padding;
 }
 
 // --------------------NavBar/Header---------------------------
@@ -124,25 +127,24 @@ header .container {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    margin-top: 1em;
+    margin-top: $common-padding;
     align-items: center;
 }
 
 #hero h1 {
     font-size: 3rem;
-    font-family: 'Bebas Neue', cursive;
+    font-family: $title-font;
 }
 
 
 
 #hero p {
     font-size: 1.10rem;
-    font-family: 'Varela Round', sans-serif;
 }
 
 .flecha-hero {
     font-size: 3rem;
-    transform:translateY(4em);
+    transform:translateY($high-padding);
 }
 // ---------------------HERO------------------------------------
 
@@ -154,7 +156,7 @@ header .container {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2em 1em;
+    padding: $midle-padding $common-padding;
     min-height: 100vh;
 }
 .carta {
@@ -166,11 +168,11 @@ header .container {
     text-align: center;
     width: 300px;
     height: 400px;
-    margin-top: 2em;
-    padding: 1em;
+    margin-top: $midle-padding;
+    padding: $common-padding;
     border-radius: 20px;
     overflow: hidden;
-    background: #000;
+    background: $main-color;
 }
 
 .carta::before {
@@ -178,7 +180,7 @@ header .container {
     position: absolute;
     width: 150px ;
     height: 150%;
-    background: linear-gradient(#ff7c00, #fff);
+    background: linear-gradient($second-color, $details-color);
     animation: animate 5s linear infinite;
 }
 
@@ -186,7 +188,7 @@ header .container {
     content: "";
     position: absolute;
     inset: 5px;
-    background: #000;
+    background: $main-color;
     border-radius: 20px;
     
     
@@ -200,15 +202,15 @@ header .container {
     }
 }
 .container-cards .carta h3 {
-    font-family: 'Bebas Neue', cursive;
+    font-family: $title-font;
     font-size: 1.5rem;
     z-index: 10;
     position: relative;
-    color: #fff;
+    color: $details-color;
 }
 
 .container-cards .carta button {
-    margin-top: 1em;
+    margin-top: $common-padding;
     z-index: 10;
     position: relative;
 }
@@ -216,7 +218,7 @@ header .container {
 .container-cards .carta p {
     z-index: 10;
     position: relative;
-    color: #fff;
+    color: $details-color;
 }
 
 

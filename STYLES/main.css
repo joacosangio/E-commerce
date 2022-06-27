@@ -7,7 +7,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   background-color: #000;
   color: #fff;
   scroll-behavior: smooth; }
@@ -31,7 +31,7 @@ button {
   font-size: 1.25rem;
   font-weight: bold;
   text-align: center;
-  font-family: 'Dancing Script', cursive; }
+  font-family: "Dancing Script", cursive; }
 
 button:hover {
   transform: scale(1.1);
@@ -42,7 +42,7 @@ strong {
   font-weight: bold; }
 
 a {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-weight: bold;
   text-decoration: none;
   color: #ff7c00;
@@ -73,7 +73,8 @@ header {
   text-align: center; }
 
 header .container {
-  display: flex; }
+  display: flex;
+  justify-content: center; }
 
 .navbar {
   display: flex;
@@ -99,11 +100,10 @@ header .container {
 
 #hero h1 {
   font-size: 3rem;
-  font-family: 'Bebas Neue', cursive; }
+  font-family: "Bebas Neue", cursive; }
 
 #hero p {
-  font-size: 1.10rem;
-  font-family: 'Varela Round', sans-serif; }
+  font-size: 1.10rem; }
 
 .flecha-hero {
   font-size: 3rem;
@@ -138,7 +138,7 @@ header .container {
   width: 150px;
   height: 150%;
   background: linear-gradient(#ff7c00, #fff);
-  animation: animate 5s linear infinite; }
+  animation: animate 5.5s linear infinite; }
 
 .carta::after {
   content: "";
@@ -154,7 +154,7 @@ header .container {
     transform: rotate(360deg); } }
 
 .container-cards .carta h3 {
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   font-size: 1.5rem;
   z-index: 10;
   position: relative;
@@ -169,3 +169,59 @@ header .container {
   z-index: 10;
   position: relative;
   color: #fff; }
+
+#tuPaginaWeb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../MULTIMEDIA/hero2.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 400px 750px; }
+
+#tuPaginaWeb h2 {
+  font-family: "Bebas Neue", cursive;
+  padding-bottom: 4em; }
+
+#tuPaginaWeb h3 {
+  padding-top: 2em;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem; }
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+footer h3 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.6rem; }
+
+footer a {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.3rem; }
+
+footer i {
+  color: #ff7c00; }
+
+.icontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.3rem; }
+
+footer p {
+  font-size: 0.7rem;
+  transform: translateX(100px);
+  margin-bottom: 0;
+  padding-bottom: 0; }

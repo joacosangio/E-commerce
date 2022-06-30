@@ -90,6 +90,7 @@ header {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    border-bottom: $details-color 1px solid;
 }
 
 header .container {
@@ -130,6 +131,7 @@ header .container {
     background-position: center center;
     margin-top: $common-padding;
     align-items: center;
+    border-bottom: $details-color 1px solid;
 }
 
 #hero h1 {
@@ -243,6 +245,7 @@ header .container {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 400px 750px;
+    border-bottom: $details-color 1px solid;
 }
 
 #tuPaginaWeb h2 {
@@ -302,9 +305,4 @@ footer p {
     padding-bottom: 0;
 }
 
-// footer .copycontainer {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-end;
-// }
 // ----------------------FOOTER-----------------------------

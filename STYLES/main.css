@@ -70,7 +70,8 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  border-bottom: #fff 1px solid; }
 
 header .container {
   display: flex;
@@ -96,7 +97,8 @@ header .container {
   background-size: cover;
   background-position: center center;
   margin-top: 1em;
-  align-items: center; }
+  align-items: center;
+  border-bottom: #fff 1px solid; }
 
 #hero h1 {
   font-size: 3rem;
@@ -180,7 +182,8 @@ header .container {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../MULTIMEDIA/hero2.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 400px 750px; }
+  background-size: 400px 750px;
+  border-bottom: #fff 1px solid; }
 
 #tuPaginaWeb h2 {
   font-family: "Bebas Neue", cursive;

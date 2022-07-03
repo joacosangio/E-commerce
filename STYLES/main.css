@@ -228,3 +228,12 @@ footer p {
   transform: translateX(100px);
   margin-bottom: 0;
   padding-bottom: 0; }
+
+.btn-agregar {
+  color: #ff7c00;
+  background-color: #000;
+  border-radius: 30px;
+  border: #ff7c00 solid 2px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Dancing Script", cursive; }

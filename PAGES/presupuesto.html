@@ -15,17 +15,7 @@
 
     <!-- Inicio del HEADER -->
 <header class="menu">
-
-    <div class="container">
-
-        <a href="#">
-
-            <img src="../MULTIMEDIA/logo.jpg" alt="Joaquin Sangiorgi" class="logo">
-
-        </a>
         
-    </div>
-                
         <nav class="navbar">
 
             <a href="../index.html">Home</a>
@@ -35,6 +25,8 @@
             <a href="/PAGES/contacto.html">Contacto</a>
 
             <a href="/PAGES/presupuesto.html">Presupuesto</a>
+
+            <button id="carrito" class="carrito"><i class="fa-solid fa-cart-shopping"></i></button>
 
         </nav>
 
@@ -64,8 +56,15 @@
 
 
 <!-- Inicio MODAL -->
-<div class="modal" id="modal">
-    
+<div class="modal-cont" id="modal-cont">
+    <div class="modal" id="modal">
+        <button id="close-carrito" class="close-carrito">X</button>
+        <h4>Tu carrito</h4>
+
+        <div class="productos-carrito" id="productos-carrito">
+            
+        </div>
+    </div>
 </div>
 <!-- Inicio MODAL -->
 

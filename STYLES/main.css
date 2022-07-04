@@ -35,7 +35,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
-  transition: all ease-in-out 0.5s; }
+  transition: all ease-in-out 1ms; }
 
 strong {
   color: #ff7c00;
@@ -271,8 +271,39 @@ footer p {
   transform: scale(1.1);
   transition: all ease-in-out 1ms; }
 
-.modal {
+.modal-cont {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  position: fixed; }
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden; }
+
+.modal {
+  background-color: #ff7c00;
+  color: #fff;
+  width: 300px;
+  min-height: 300px;
+  border-radius: 1em;
+  padding: 1em; }
+
+.modal h4 {
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5rem; }
+
+.close-carrito {
+  color: #fff;
+  border: #fff 2px solid; }
+
+.carrito {
+  margin-bottom: 1em; }
+
+.modal-cont--abierto {
+  opacity: 1;
+  visibility: visible; }

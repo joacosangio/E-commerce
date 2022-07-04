@@ -76,6 +76,20 @@ arrayPaginas.forEach((item) => {
 // btnpres.addEventListener("click", elegirPagina)
 
 
+// ----------------------------MODAL---------------------------
+
+const modalCont = document.querySelector("#modal-cont")
+const openModal = document.querySelector("#carrito")
+const closeModal = document.querySelector("#close-carrito")
+
+openModal.addEventListener("click", () => {
+    modalCont.classList.add("modal-cont--abierto")
+})
+
+closeModal.addEventListener("click", () => {
+    modalCont.classList.remove("modal-cont--abierto")
+})
+
 
 
 

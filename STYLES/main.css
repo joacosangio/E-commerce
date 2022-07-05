@@ -290,7 +290,11 @@ footer p {
   width: 300px;
   min-height: 300px;
   border-radius: 1em;
-  padding: 1em; }
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
 
 .modal h4 {
   text-align: center;
@@ -299,7 +303,9 @@ footer p {
 
 .close-carrito {
   color: #fff;
-  border: #fff 2px solid; }
+  border: #fff 2px solid;
+  font-family: "Kanit", sans-serif;
+  width: 40px; }
 
 .carrito {
   margin-bottom: 1em; }
@@ -307,3 +313,9 @@ footer p {
 .modal-cont--abierto {
   opacity: 1;
   visibility: visible; }
+
+.productos-carrito {
+  width: 300px;
+  height: 250px;
+  border: #000 2px solid;
+  border-radius: 1em; }

@@ -244,11 +244,16 @@ footer p {
   justify-content: center;
   align-items: center; }
 
-#pag-disponibles {
+.pag-disponibles {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+
+.pag-disponibles h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.3rem;
+  text-align: center; }
 
 .pagina-presupuesto {
   display: flex;
@@ -260,11 +265,12 @@ footer p {
   width: 200px;
   border-radius: 1em;
   margin-top: 2em;
-  text-align: center; }
+  text-align: center;
+  font-family: "Varela Round", sans-serif; }
 
 .pagina-presupuesto h3 {
   font-family: "Bebas Neue", cursive;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-top: 0; }
 
 .pagina-presupuesto:hover {

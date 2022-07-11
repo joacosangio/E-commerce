@@ -24,7 +24,7 @@ arrayPaginas.forEach((item) => {
                     <p>Tiempo: ${item.tiempo}</p>
                     <p>Complejidad: ${item.complejidad}</p>
                     <p>Agregar al carrito</p>
-                    <button class="btn-agregar"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button onclick= "opemModal" class="btn-agregar"><i class="fa-solid fa-cart-shopping"></i></button>
                     `
     paginasContainer.append(divProducto)
 })
@@ -49,7 +49,7 @@ closeModal.addEventListener("click", () => {
 
 const carrito = []
 const productosContainer = document.querySelector("#productos-carrito")
-const agregarProducto = document.querySelector("#btn-agregar")
+const agregarProducto = document.querySelector("btn-agregar")
 
 
 const productoCarrito = document.createElement("div")
@@ -61,4 +61,23 @@ agregarProducto.addEventListener("click", () => {
     productoCarrito.innerHTML = `<h4>Página: ${item.nombre}</h4>
                                 <p>Precio: $${item.precio}</p>`
     productosContainer.add(productoCarrito)
-})
+}) 
+
+// Esto no se porque no funciona. Cambie los ID por clases y nada
+// Y tambien acá es donde deberia hacer lo que me comentas sobre el modal que esta siempre
+// oculto y una funcion lo muestra. Puedo empezar aca abajo a hacerlo como creo que seria
+
+
+function carritoAbierto() {
+    agregarProducto.addEventListener("click", () => {
+    })
+}
+// Aca no entiendo que poner en la funcion. Porque yo lo que quiero es que cuando hago click en el boton, ese elemento se vaya al carrito
+
+
+
+function carritoCerrado() {
+
+}
+
+// No se muy bien si tengo que modificar el modal que ya tengo hecho para realizar estas funciones o tengo que plantear el modal de otra manera

@@ -206,7 +206,7 @@ header .container {
 }
 .container-cards .carta h3 {
     font-family: $title-font;
-    font-size: 1.5rem;
+    font-size: $medium-titles;
     z-index: 10;
     position: relative;
     color: $details-color;
@@ -256,7 +256,7 @@ header .container {
 #tuPaginaWeb h3 {
     padding-top: $midle-padding;
     font-family: $title-font;
-    font-size: 2rem;
+    font-size: $big-titles;
 }
 // ---------------HERO PAGINA WEB---------------------------
 
@@ -278,7 +278,7 @@ footer .container {
 
 footer h3 {
     font-family: $title-font;
-    font-size: 1.6rem;
+    font-size: $medium-titles;
 }
 
 footer a {
@@ -326,11 +326,18 @@ footer p {
     align-items: center;
 }
 
-#pag-disponibles {
+.pag-disponibles {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.pag-disponibles h2 {
+    font-family: $title-font;
+    font-size: $big-titles;
+    text-align: center;
+    
 }
 
 .pagina-presupuesto {
@@ -344,11 +351,12 @@ footer p {
     border-radius: $common-padding;
     margin-top: $midle-padding;
     text-align: center;
+    font-family: $body-font;
 }
 
 .pagina-presupuesto h3 {
     font-family: $title-font;
-    font-size: 1.5rem;
+    font-size: $medium-titles;
     margin-top: 0;
 }
 

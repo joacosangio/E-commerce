@@ -50,7 +50,7 @@ closeModal.addEventListener("click", () => {
 const carrito = []
 const productosContainer = document.querySelector("#productos-carrito")
 const agregarProducto = document.querySelector("btn-agregar")
-
+ 
 
 const productoCarrito = document.createElement("div")
 
@@ -63,6 +63,8 @@ agregarProducto.addEventListener("click", () => {
     productosContainer.add(productoCarrito)
 }) 
 
+console.log (productoCarrito)
+console.log (productosContainer)
 // Esto no se porque no funciona. Cambie los ID por clases y nada
 // Y tambien acá es donde deberia hacer lo que me comentas sobre el modal que esta siempre
 // oculto y una funcion lo muestra. Puedo empezar aca abajo a hacerlo como creo que seria

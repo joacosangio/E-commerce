@@ -424,3 +424,30 @@ footer p {
     border-radius: $common-padding;
 }
 // -------------------MODAL---------------------------------
+
+// -------------------FORMULARIO----------------------------
+#contenedor-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#btn-cliente {
+    color: $main-color;
+    background-color: $second-color;
+    border-color: $details-color;
+}
+
+#formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#formulario input {
+    width: 400px;
+}
+// -------------------FORMULARIO----------------------------

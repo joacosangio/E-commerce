@@ -286,6 +286,12 @@ footer a {
     font-size: 1.3rem;
 }
 
+footer i:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out;
+    color: $details-color;
+}
+
 footer i {
     color: $second-color;
 }

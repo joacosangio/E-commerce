@@ -49,7 +49,7 @@ closeModal.addEventListener("click", () => {
 
 const carrito = []
 const productosContainer = document.querySelector("#productos-carrito")
-const agregarProducto = document.querySelector("btn-agregar")
+const agregarProducto = document.getElementsByClassName("btn-agregar")
  
 
 const productoCarrito = document.createElement("div")
@@ -60,7 +60,7 @@ agregarProducto.addEventListener("click", () => {
 
     productoCarrito.innerHTML = `<h4>Página: ${item.nombre}</h4>
                                 <p>Precio: $${item.precio}</p>`
-    productosContainer.add(productoCarrito)
+    productosContainer.push(productoCarrito)
 }) 
 
 console.log (productoCarrito)

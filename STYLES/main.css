@@ -214,6 +214,11 @@ footer a {
   font-family: "Kanit", sans-serif;
   font-size: 1.3rem; }
 
+footer i:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out;
+  color: #fff; }
+
 footer i {
   color: #ff7c00; }
 

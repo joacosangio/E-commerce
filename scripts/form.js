@@ -10,7 +10,15 @@ const alerta = document.querySelector("#alerta-form")
 
 const formContacto = () => {
     if(nombre.value == "" || apellido.value == "" || dni.value == "" || nacionalidad.value == "" || email.value == "" || telefono.value == ""){
-        alert("Completar todos los campos para seguir")
+        Swal.fire({
+            icon: 'error',
+            iconColor:"#ff7c00;",
+            background: "#000",
+            color: "#fff",
+            title: 'Oops...',
+            text: 'Debes completar todos los campos!',
+            timer: 2000,
+          })
     }
     else{
         arrayDatos.push(nombre, apellido, dni, nacionalidad, email, telefono)
@@ -23,12 +31,19 @@ const formContacto = () => {
         nacionalidad.value = ""
         email.value = ""
         telefono.value = ""
-        setTimeout( () => {
-            alerta.innerHTML = `
-            <h3>Formulario enviado!</h3>`
-        },)
-        setTimeout( () => {
-            alerta.innerHTML = ``
-        }, 5000 )
+        Swal.fire({
+            iconColor:"#ff7c00;",
+            background: "#000",
+            color: "#fff",
+            icon: "success",
+            title: "Bienvenido",
+            text: "Ya eres uno de nuestros clientes!",
+            timer: 2000,
+            timerProgressBar: true,
+        })
     }
 }
+
+btnEnviar.addEventListener("click", () => {
+    formContacto ()
+})

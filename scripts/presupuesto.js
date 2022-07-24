@@ -24,7 +24,7 @@ arrayPaginas.forEach((item) => {
                     <p>Tiempo: ${item.tiempo}</p>
                     <p>Complejidad: ${item.complejidad}</p>
                     <p>Agregar al carrito</p>
-                    <button onclick= "opemModal" class="btn-agregar"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button class="btn-agregar"><i class="fa-solid fa-cart-shopping"></i></button>
                     `
     paginasContainer.append(divProducto)
 })
@@ -48,19 +48,22 @@ closeModal.addEventListener("click", () => {
 //----------------------------PRODUCTOS EN EL CARRITO-------------------
 
 const carrito = []
-const productosContainer = document.querySelector("#productos-carrito")
+const productosContainer = document.querySelector("#productos-cont")
 const agregarProducto = document.getElementsByClassName("btn-agregar")
  
-
-const productoCarrito = document.createElement("div")
-
 agregarProducto.addEventListener("click", () => {
-    productoCarrito.classList.add("producto-carrito")
+
     const productoCarrito = document.createElement("div")
+    productoCarrito.classList.add("producto-carrito")
 
     productoCarrito.innerHTML = `<h4>Página: ${item.nombre}</h4>
                                 <p>Precio: $${item.precio}</p>`
     productosContainer.push(productoCarrito)
+
+    Toastify({
+        text: `Tu producto ${item.nombre} se agregó correctamente`,
+        duration: 2500,
+    }).showToast();
 }) 
 
 console.log (productoCarrito)
@@ -70,16 +73,16 @@ console.log (productosContainer)
 // oculto y una funcion lo muestra. Puedo empezar aca abajo a hacerlo como creo que seria
 
 
-function carritoAbierto() {
-    agregarProducto.addEventListener("click", () => {
-    })
-}
+// function carritoAbierto() {
+//     agregarProducto.addEventListener("click", () => {
+//     })
+// }
 // Aca no entiendo que poner en la funcion. Porque yo lo que quiero es que cuando hago click en el boton, ese elemento se vaya al carrito
 
 
 
-function carritoCerrado() {
+// function carritoCerrado() {
 
-}
+// }
 
 // No se muy bien si tengo que modificar el modal que ya tengo hecho para realizar estas funciones o tengo que plantear el modal de otra manera

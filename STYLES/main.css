@@ -179,15 +179,16 @@ header .container {
   flex-direction: column;
   text-align: center;
   min-height: 100vh;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../MULTIMEDIA/hero2.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../MULTIMEDIA/hero3.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 400px 750px;
+  background-size: cover;
   border-bottom: #fff 1px solid; }
 
 #tuPaginaWeb h2 {
   font-family: "Bebas Neue", cursive;
-  padding-bottom: 4em; }
+  padding-bottom: 4em;
+  font-size: 2.3rem; }
 
 #tuPaginaWeb h3 {
   padding-top: 2em;
@@ -325,7 +326,7 @@ footer p {
   opacity: 1;
   visibility: visible; }
 
-.productos-carrito {
+.productos-cont {
   width: 300px;
   height: 250px;
   border: #000 2px solid;
@@ -346,7 +347,8 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  color: #000; }
 
 #formulario input {
   width: 400px; }

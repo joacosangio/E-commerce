@@ -6,9 +6,8 @@ const email = document.querySelector("#input-email")
 const telefono = document.querySelector("#input-telefono")
 const btnEnviar = document.querySelector("#btn-cliente")
 const arrayDatos = []
-const alerta = document.querySelector("#alerta-form")
 
-const formContacto = () => {
+btnEnviar.addEventListener("click", () => {
     if(nombre.value == "" || apellido.value == "" || dni.value == "" || nacionalidad.value == "" || email.value == "" || telefono.value == ""){
         Swal.fire({
             icon: 'error',
@@ -42,8 +41,4 @@ const formContacto = () => {
             timerProgressBar: true,
         })
     }
-}
-
-btnEnviar.addEventListener("click", () => {
-    formContacto ()
 })

@@ -50,7 +50,9 @@ closeModal.addEventListener("click", () => {
 const carrito = []
 const productosContainer = document.querySelector("#productos-cont")
 const agregarProducto = document.getElementsByClassName("btn-agregar")
- 
+
+console.log(agregarProducto)
+
 agregarProducto.addEventListener("click", () => {
 
     const productoCarrito = document.createElement("div")

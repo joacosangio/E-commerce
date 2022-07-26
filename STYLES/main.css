@@ -352,3 +352,8 @@ footer p {
 
 #formulario input {
   width: 400px; }
+
+.swal-error {
+  color: #fff;
+  background-color: #000;
+  border-color: #ff7c00; }

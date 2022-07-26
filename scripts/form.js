@@ -7,16 +7,22 @@ const telefono = document.querySelector("#input-telefono")
 const btnEnviar = document.querySelector("#btn-cliente")
 const arrayDatos = []
 
-btnEnviar.addEventListener("click", () => {
+
+
+btnEnviar.addEventListener("click", (e) => {
+    e.preventDefault();
     if(nombre.value == "" || apellido.value == "" || dni.value == "" || nacionalidad.value == "" || email.value == "" || telefono.value == ""){
         Swal.fire({
             icon: 'error',
-            iconColor:"#ff7c00;",
-            background: "#000",
+            iconColor: "#000",
             color: "#fff",
-            title: 'Oops...',
+            confirmButtonColor: "#000",
+            background: "#ff7c00",
+            title: '=(',
             text: 'Debes completar todos los campos!',
-            timer: 2000,
+            timer: 2500,
+            timerProgressBar: true,
+            // customClass: "swal-error",
           })
     }
     else{
@@ -31,13 +37,14 @@ btnEnviar.addEventListener("click", () => {
         email.value = ""
         telefono.value = ""
         Swal.fire({
-            iconColor:"#ff7c00;",
-            background: "#000",
-            color: "#fff",
             icon: "success",
+            iconColor: "#000",
+            color: "#fff",
+            confirmButtonColor: "#000",
+            background: "#ff7c00",
             title: "Bienvenido",
             text: "Ya eres uno de nuestros clientes!",
-            timer: 2000,
+            timer: 2500,
             timerProgressBar: true,
         })
     }

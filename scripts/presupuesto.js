@@ -62,15 +62,33 @@ for(let i = 0 ; i < agregarProducto.length ; i++){
         const productoCarrito = document.createElement("div")
         productoCarrito.classList.add("producto-carrito")
     
-        productoCarrito.innerHTML = `<h4>${Pagina.nombre}</h4>
-                                    <p>Precio $:${Pagina.precio}</p>
+        productoCarrito.innerHTML = `<h4>${this.nombre}</h4>
+                                    <p>Precio $:${this.precio}</p>
                                     <button class = "eliminar-prod">X</button>`
         productosContainer.append(productoCarrito)
     
         Toastify({
-            text: `Tu producto ${Pagina.nombre} se agregó correctamente`,
+            text: `Tu producto ${this.nombre} se agregó correctamente`,
             duration: 2500,
+            style: {
+                color: "#000",
+                border: "solid 2px #fff",
+                background: "#ff7c00",
+            }
         }).showToast();
     }) 
 }
 
+// const eliminarProd = document.getElementsByClassName("eliminar-prod")
+
+
+// for(let i = 0 ; i < eliminarProd.length ; i++){
+
+//     eliminarProd[i].addEventListener("click", (e) => {
+//         e.preventDefault();
+//         productosContainer.remove(productoCarrito)
+    
+//     })
+// }
+
+// aca intente una funcion para remover los objetos del carrito

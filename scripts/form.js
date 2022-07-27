@@ -22,7 +22,6 @@ btnEnviar.addEventListener("click", (e) => {
             text: 'Debes completar todos los campos!',
             timer: 2500,
             timerProgressBar: true,
-            // customClass: "swal-error",
           })
     }
     else{

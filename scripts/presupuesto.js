@@ -1,5 +1,6 @@
 class Pagina {
-    constructor(nombre, precio, tiempo, complejidad){
+    constructor(id, nombre, precio, tiempo, complejidad){
+        this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.tiempo= tiempo;
@@ -8,9 +9,9 @@ class Pagina {
     }
 
 const paginasContainer = document.querySelector("#pag-disponibles")
-const ecommerce = new Pagina("E-commerce", 230000, "Elevado", "Elevada")
-const elearning = new Pagina("E-learning", 210000, "Elevado", "Media")
-const estatica = new Pagina("Estática", 190000, "Medio", "Sencilla")
+const ecommerce = new Pagina(0, "E-commerce", 230000, "Elevado", "Elevada")
+const elearning = new Pagina(1, "E-learning", 210000, "Elevado", "Media")
+const estatica = new Pagina(2, "Estática", 190000, "Medio", "Sencilla")
 
 const arrayPaginas = [ecommerce, elearning, estatica]
 
@@ -24,7 +25,7 @@ arrayPaginas.forEach((item) => {
                     <p>Tiempo: ${item.tiempo}</p>
                     <p>Complejidad: ${item.complejidad}</p>
                     <p>Agregar al carrito</p>
-                    <button class="btn-agregar"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button id = "producto-${item.id}" class="btn-agregar"><i id = "producto-${item.id}"  class="fa-solid fa-cart-shopping"></i></button>
                     `
     paginasContainer.append(divProducto)
 })
@@ -56,18 +57,23 @@ const agregarProducto = document.getElementsByClassName("btn-agregar")
 for(let i = 0 ; i < agregarProducto.length ; i++){
     
     agregarProducto[i].addEventListener("click", (e) => {
-        e.preventDefault()
+
+        let idProd = Number(e.target.id.split("-")[1])
+        console.log(idProd)
+        console.log (e)
+
+        const producto = buscarProducto(idProd)
 
         const productoCarrito = document.createElement("div")
         productoCarrito.classList.add("producto-carrito")
     
-        productoCarrito.innerHTML = `<h4>${this.nombre}</h4>
-                                    <p>Precio $:${this.precio}</p>
+        productoCarrito.innerHTML = `<h4>${producto.nombre}</h4>
+                                    <p>Precio $:${producto.precio}</p>
                                     <button class = "eliminar-prod">X</button>`
         productosContainer.append(productoCarrito)
     
         Toastify({
-            text: `Tu producto ${this.nombre} se agregó correctamente`,
+            text: `Tu producto ${producto.nombre} se agregó correctamente`,
             duration: 2500,
             style: {
                 color: "#000",
@@ -78,16 +84,8 @@ for(let i = 0 ; i < agregarProducto.length ; i++){
     }) 
 }
 
-// const eliminarProd = document.getElementsByClassName("eliminar-prod")
 
-
-// for(let i = 0 ; i < eliminarProd.length ; i++){
-
-//     eliminarProd[i].addEventListener("click", (e) => {
-//         e.preventDefault();
-//         productosContainer.remove(productoCarrito)
-    
-//     })
-// }
-
-// aca intente una funcion para remover los objetos del carrito
+function buscarProducto(idProd){
+    const prod = arrayPaginas.filter (identificador => identificador.id == idProd)
+    return prod [0]
+}

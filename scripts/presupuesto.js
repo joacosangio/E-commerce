@@ -51,7 +51,6 @@ const carrito = []
 const productosContainer = document.querySelector("#productos-cont")
 const agregarProducto = document.getElementsByClassName("btn-agregar")
 
-console.log(agregarProducto)
 
 
 for(let i = 0 ; i < agregarProducto.length ; i++){

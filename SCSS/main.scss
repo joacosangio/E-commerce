@@ -468,3 +468,32 @@ footer p {
 }
 //-------------------SWAL----------------------------------
 
+// --------------PRODUCTO DEL CARRITO----------------------
+.producto-carrito {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.producto-carrito p{
+    color: $main-color;
+}
+
+.producto-carrito h4 {
+    font-size: $small-titles;
+    color: $main-color;
+}
+
+.producto-carrito button {
+    width: auto;
+    border-color: $details-color;
+    color: $details-color;
+    font-family: $body-font;
+}
+
+// --------------PRODUCTO DEL CARRITO----------------------
+
+

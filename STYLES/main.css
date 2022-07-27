@@ -357,3 +357,23 @@ footer p {
   color: #fff;
   background-color: #000;
   border-color: #ff7c00; }
+
+.producto-carrito {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around; }
+
+.producto-carrito p {
+  color: #000; }
+
+.producto-carrito h4 {
+  font-size: 1.3rem;
+  color: #000; }
+
+.producto-carrito button {
+  width: auto;
+  border-color: #fff;
+  color: #fff;
+  font-family: "Varela Round", sans-serif; }

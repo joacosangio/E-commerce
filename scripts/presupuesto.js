@@ -49,8 +49,11 @@ closeModal.addEventListener("click", () => {
 //----------------------------PRODUCTOS EN EL CARRITO-------------------
 
 const carrito = []
+const carritoParaEliminar = []
 const productosContainer = document.querySelector("#productos-cont")
 const agregarProducto = document.getElementsByClassName("btn-agregar")
+
+
 
 
 
@@ -59,8 +62,6 @@ for(let i = 0 ; i < agregarProducto.length ; i++){
     agregarProducto[i].addEventListener("click", (e) => {
 
         let idProd = Number(e.target.id.split("-")[1])
-        console.log(idProd)
-        console.log (e)
 
         const producto = buscarProducto(idProd)
 
@@ -69,8 +70,13 @@ for(let i = 0 ; i < agregarProducto.length ; i++){
     
         productoCarrito.innerHTML = `<h4>${producto.nombre}</h4>
                                     <p>Precio $:${producto.precio}</p>
-                                    <button class = "eliminar-prod">X</button>`
+                                    <button onclick="eliminarDelCarrito()" class = "eliminar-prod">X</button>`
         productosContainer.append(productoCarrito)
+        carrito.push(producto.precio)
+        carritoParaEliminar.push(productoCarrito)
+        console.log(carritoParaEliminar)
+
+        calcularTotal()
     
         Toastify({
             text: `Tu producto ${producto.nombre} se agregó correctamente`,
@@ -84,8 +90,40 @@ for(let i = 0 ; i < agregarProducto.length ; i++){
     }) 
 }
 
-
-function buscarProducto(idProd){
+const buscarProducto = (idProd) => {
     const prod = arrayPaginas.filter (identificador => identificador.id == idProd)
     return prod [0]
 }
+
+const precioTotal = document.querySelector("#precioTotal")
+
+const calcularTotal = () => {
+    let total = 0;
+
+    carrito.forEach((precio) => {
+
+        total += precio
+    })
+
+    precioTotal.innerText = total
+}
+
+const eliminarDelCarrito = (id) => {
+    
+    const ite = carritoParaEliminar.find((producto) => producto.id === id)
+    const indice = carritoParaEliminar.indexOf(ite)
+    carritoParaEliminar.splice(indice, 1)
+    console.log(carritoParaEliminar)
+    
+    buscarProducto()
+
+    // let className = id.className.split("")
+    // console.log(className)
+    // buscarProducto(productosContainer)
+    // calcularTotal()
+    
+
+}
+
+// Tengo que averiguar como hacer para que esto se refleje visualmente
+

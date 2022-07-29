@@ -25,26 +25,51 @@ btnEnviar.addEventListener("click", (e) => {
           })
     }
     else{
-        arrayDatos.push(nombre, apellido, dni, nacionalidad, email, telefono)
-        console.log(nombre.value, apellido.value, dni.value, nacionalidad.value, email.value, telefono.value)
-        localStorage.setItem(nombre.value, apellido.value, dni.value, nacionalidad.value, email.value, telefono.value)
-        console.log(localStorage)
-        nombre.value = ""
-        apellido.value = ""
-        dni.value = ""
-        nacionalidad.value = ""
-        email.value = ""
-        telefono.value = ""
-        Swal.fire({
-            icon: "success",
-            iconColor: "#000",
-            color: "#fff",
-            confirmButtonColor: "#000",
-            background: "#ff7c00",
-            title: "Bienvenido",
-            text: "Ya eres uno de nuestros clientes!",
-            timer: 2500,
-            timerProgressBar: true,
-        })
+        registro()
+        
     }
 })
+
+
+function registro() {
+    
+    let userNombre = []
+    let userApellido = []
+    let userDni = []
+    let userNacionalidad = []
+    let userEmail = []
+    let userTelefono = []
+
+    userNombre.push(nombre.value)
+    userApellido.push(apellido.value)
+    userDni.push(dni.value)
+    userNacionalidad.push(nacionalidad.value)
+    userEmail.push(email.value)
+    userTelefono.push(telefono.value)
+
+    localStorage.setItem("Nombre del usuario:", userNombre)
+    localStorage.setItem("Apellido del usuario:", userApellido)
+    localStorage.setItem("DNI del usuario:", userDni)
+    localStorage.setItem("Nacionalidad del usuario:", userNacionalidad)
+    localStorage.setItem("Email del usuario:", userEmail)
+    localStorage.setItem("Telefono del usuario:", userTelefono)
+    Swal.fire({
+        icon: "success",
+        iconColor: "#000",
+        color: "#fff",
+        confirmButtonColor: "#000",
+        background: "#ff7c00",
+        title: "Bienvenido",
+        text: "Ya eres uno de nuestros clientes!",
+        timer: 2500,
+        timerProgressBar: true,
+    })
+
+    nombre.value= ""
+    apellido.value= ""
+    dni.value= ""
+    nacionalidad.value= ""
+    email.value= ""
+    telefono.value= ""
+    
+}

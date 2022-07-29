@@ -19,7 +19,7 @@ btnLinkedin.addEventListener("click", (e) => {
     e.preventDefault();
     setTimeout(() => {
         Swal.fire({
-            title: '<strong>Hola!!</strong>',
+            title: '<strong>Hola</strong>!!',
             html:
               'Te dejo mi link a mi ' +
               '<a href="https://www.linkedin.com/in/joaquin-sangiorgi-2b5903206/">Linkedin</a> ' +
@@ -28,12 +28,17 @@ btnLinkedin.addEventListener("click", (e) => {
             showCancelButton: true,
             showConfirmButton: false,
             cancelButtonText:
-              '<p>No</p>',
+              'No gracias',
               cancelButtonColor: "#ff7c00",
               color: "#fff",
               background: "#000",
               allowEscapeKey: true,
               allowEnterKey: true,
+            
+              customClass: {
+                border: "2px solid #ff7c00"
+              }
           })
+          
     },0)
 })

@@ -117,13 +117,11 @@ const eliminarDelCarrito = (id) => {
     
     buscarProducto()
 
-    // let className = id.className.split("")
-    // console.log(className)
-    // buscarProducto(productosContainer)
-    // calcularTotal()
-    
+ 
 
 }
 
-// Tengo que averiguar como hacer para que esto se refleje visualmente
+function vaciarCarrito () {
+
+}
 

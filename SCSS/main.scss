@@ -441,6 +441,11 @@ footer p {
     
 }
 
+#contenedor-form h2 {
+    font-family: $title-font;
+    font-size: $big-titles;
+}
+
 #btn-cliente {
     color: $main-color;
     background-color: $second-color;
@@ -455,9 +460,21 @@ footer p {
     color: $main-color;
 }
 
-#formulario input {
+.form-control {
+    background-color: $second-color;
+    color: $main-color;
+    border-color: $details-color;
     width: 400px;
+    text-decoration: none;
 }
+
+.form-control::placeholder {
+    color: $main-color;
+    font-family: $a-font;
+
+}
+
+
 // -------------------FORMULARIO----------------------------
 
 

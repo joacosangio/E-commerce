@@ -338,6 +338,10 @@ footer p {
   justify-content: center;
   align-items: center; }
 
+#contenedor-form h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.3rem; }
+
 #btn-cliente {
   color: #000;
   background-color: #ff7c00;
@@ -350,18 +354,16 @@ footer p {
   flex-direction: column;
   color: #000; }
 
-#formulario input {
-  width: 400px; }
-
-.swal-error {
-  color: #fff;
-  background-color: #000;
-  border-color: #ff7c00; }
-
-.toastify-custom {
+.form-control {
   background-color: #ff7c00;
-  border: #fff;
-  color: #000; }
+  color: #000;
+  border-color: #fff;
+  width: 400px;
+  text-decoration: none; }
+
+.form-control::placeholder {
+  color: #000;
+  font-family: "Kanit", sans-serif; }
 
 .producto-carrito {
   display: flex;

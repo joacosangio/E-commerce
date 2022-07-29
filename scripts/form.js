@@ -55,12 +55,14 @@ function registro() {
     localStorage.setItem("Telefono del usuario:", userTelefono)
     Swal.fire({
         icon: "success",
+        iconText: "=)",
         iconColor: "#000",
         color: "#fff",
         confirmButtonColor: "#000",
         background: "#ff7c00",
-        title: "Bienvenido",
+        title: `Bienvenido ${userNombre}`,
         text: "Ya eres uno de nuestros clientes!",
+        text: "Gracias! ",
         timer: 2500,
         timerProgressBar: true,
     })

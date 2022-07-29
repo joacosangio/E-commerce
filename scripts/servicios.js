@@ -21,9 +21,9 @@ arrayPaginas.forEach((item) => {
     divProducto.classList.add("pagina-presupuesto")
 
     divProducto.innerHTML = `<h3>${item.nombre}</h3>
-                    <p>Precio:$ ${item.precio}</p>
-                    <p>Tiempo: ${item.tiempo}</p>
-                    <p>Complejidad: ${item.complejidad}</p>
+                    <p><strong>Precio:$</strong> ${item.precio}</p>
+                    <p><strong>Tiempo:</strong> ${item.tiempo}</p>
+                    <p><strong>Complejidad</strong>: ${item.complejidad}</p>
                     <p>Agregar al carrito</p>
                     <button id = "producto-${item.id}" class="btn-agregar"><i id = "producto-${item.id}"  class="fa-solid fa-cart-shopping"></i></button>
                     `

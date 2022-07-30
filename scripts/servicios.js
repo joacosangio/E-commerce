@@ -20,7 +20,7 @@ closeModal.addEventListener("click", () => {
 
 let stockServicios = [0]
 
-fetch("../scripts/stock.json")
+fetch("scripts/stock.json")
     .then((resp) => resp.json())
     .then((info) => {
         

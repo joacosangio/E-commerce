@@ -373,6 +373,16 @@ footer p {
     transform: scale(1.1);
     transition: all ease-in-out 1ms ;
 }
+
+.btn-informacion {
+    color:$details-color ;
+    background-color:$main-color;
+    border-radius: 30px;
+    border: $second-color solid 2px;
+    font-weight: bold;
+    text-align: center;
+    font-family: $button-font;
+}
 // ---------------------PRODUCTOS PRESUPUESTO---------------
 
 

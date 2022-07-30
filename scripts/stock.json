@@ -1,6 +1,7 @@
 [
     {"id": 1, "nombre": "E-commerce", "complejidad": "Elevada", "tiempo": "Elevado", "precio": 230000, "descripcion": "El e-commerce o comercio electrónico es la práctica de comprar y vender productos a través de internet. También se llama ecommerce a cada tienda online que se dedica a este negocio."},
     {"id": 2, "nombre": "E-learning", "complejidad": "Moderada", "tiempo": "Elevado", "precio": 210000, "descripcion": "El término e-Learning lo podemos entender como procesos de enseñanza-aprendizaje a través de Internet. Esta modalidad permite: Una formación completamente a distancia donde los alumnos acceden a los contenidos, actividades, tareas, tutores del curso, etc. a través de Internet"},
-    {"id": 3, "nombre": "Estática", "complejidad": "Básica", "tiempo": "Moderado", "precio": 190000, "descripcion": "Una página web estática es un sitio de Internet que muestra el mismo contenido para todos los usuarios, en vez de proporcionar contenido personalizado a la medida de cada usuario, y que no se actualiza a menudo"}
+    {"id": 3, "nombre": "Estática", "complejidad": "Básica", "tiempo": "Poco", "precio": 190000, "descripcion": "Una página web estática es un sitio de Internet que muestra el mismo contenido para todos los usuarios, en vez de proporcionar contenido personalizado a la medida de cada usuario, y que no se actualiza a menudo"},
+    {"id": 4, "nombre": "Dinámica", "complejidad": "Moderada", "tiempo": "Moderado", "precio": 200000, "descripcion": "Una página web dinámica puede ser más compleja cuando hablamos de su diseño y desarrollo, pero también es más versátil cuando se trata de la funcionalidad que ofrece."}
 
 ]

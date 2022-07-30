@@ -18,7 +18,7 @@ closeModal.addEventListener("click", () => {
 
 // --------------------SERVICIOS-----------------------
 
-let stockServicios = []
+let stockServicios = [0]
 
 fetch("/scripts/stock.json")
     .then((resp) => resp.json())
@@ -39,7 +39,7 @@ fetch("/scripts/stock.json")
                                 <p>Agregar al carrito</p>
                                 <div>
                                 <button onclick="agregarAlCarrito(${item.id})" class="btn-agregar"><i class="fa-solid fa-cart-shopping"></i></button>
-                                <button onclick="mostrarInfo(${item.id})" class="btn-informacion"><i class="fa-solid fa-circle-question"></i></button>
+                                <button onclick="mostrarInfo()" class="btn-informacion"><i class="fa-solid fa-circle-question"></i></button>
                                 </div>`
         
             serviciosContainer.append(servicio)
@@ -60,7 +60,6 @@ function agregarAlCarrito(id) {
 
     renderizarCarrito()
     calcularPrecioTotal()
-    console.log(carritoDeServicios)
 
     Toastify({
         text: `Tu producto ${itemParaAgregar.nombre} se agregó correctamente`,
@@ -158,7 +157,7 @@ function mostrarInfo() {
 
         Swal.fire( {
             icon: "info",
-            title: `¿Que es un ${serv.nombre} ?`,
+            title: `¿Que es una página "${serv.nombre}" ?`,
             text: `${serv.descripcion}`,
             showCloseButton: true,
                   color: "#fff",

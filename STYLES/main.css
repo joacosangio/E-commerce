@@ -285,6 +285,15 @@ footer p {
   transform: scale(1.1);
   transition: all ease-in-out 1ms; }
 
+.btn-informacion {
+  color: #fff;
+  background-color: #000;
+  border-radius: 30px;
+  border: #ff7c00 solid 2px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Dancing Script", cursive; }
+
 .modal-cont {
   width: 100%;
   height: 100vh;

@@ -18,9 +18,9 @@ closeModal.addEventListener("click", () => {
 
 // --------------------SERVICIOS-----------------------
 
-let stockServicios = [0]
+let stockServicios = []
 
-fetch("/stock.json")
+fetch('/stock.json')
     .then((resp) => resp.json())
     .then((info) => {
         
@@ -39,7 +39,7 @@ fetch("/stock.json")
                                 <p>Agregar al carrito</p>
                                 <div>
                                 <button onclick="agregarAlCarrito(${item.id})" class="btn-agregar"><i class="fa-solid fa-cart-shopping"></i></button>
-                                <button onclick="mostrarInfo()" class="btn-informacion"><i class="fa-solid fa-circle-question"></i></button>
+                                <button onclick="mostrarInfo(${item.id})" class="btn-informacion"><i class="fa-solid fa-circle-question"></i></button>
                                 </div>`
         
             serviciosContainer.append(servicio)

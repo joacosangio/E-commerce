@@ -21,7 +21,7 @@ btnLinkedin.addEventListener("click", (e) => {
         Swal.fire({
             title: '<strong>Hola</strong>!!',
             html:
-              'Te dejo mi link a mi ' +
+              'Te dejo el link a mi ' +
               '<a href="https://www.linkedin.com/in/joaquin-sangiorgi-2b5903206/">Linkedin</a> ' +
               'por si te gusta mi trabajo! Espero que te guste mi página',
             showCloseButton: false,

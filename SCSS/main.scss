@@ -267,6 +267,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
+    border-top: 1px solid $details-color;
 }
 
 footer .container {
@@ -338,6 +339,7 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: $midle-padding;
 }
 
 .pag-disponibles h2 {

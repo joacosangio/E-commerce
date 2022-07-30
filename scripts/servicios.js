@@ -20,7 +20,7 @@ closeModal.addEventListener("click", () => {
 
 let stockServicios = []
 
-fetch('./stock.json')
+fetch('../stock.json')
     .then((resp) => resp.json())
     .then((info) => {
         
@@ -154,7 +154,7 @@ btnVaciarCarrito.addEventListener("click", vaciarCarrito)
 function mostrarInfo() {
     
     stockServicios.forEach((serv) => {
-
+    
         Swal.fire( {
             icon: "info",
             title: `¿Que es una página "${serv.nombre}" ?`,
@@ -171,6 +171,5 @@ function mostrarInfo() {
     })
 
 }
-
 
 // --------------------CARRITO-------------------------

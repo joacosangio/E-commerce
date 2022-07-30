@@ -1,38 +1,6 @@
-class Pagina {
-    constructor(id, nombre, precio, tiempo, complejidad){
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.tiempo= tiempo;
-        this.complejidad = complejidad;
-    }
-    }
-
-const paginasContainer = document.querySelector("#pag-disponibles")
-const ecommerce = new Pagina(0, "E-commerce", 230000, "Elevado", "Elevada")
-const elearning = new Pagina(1, "E-learning", 210000, "Elevado", "Media")
-const estatica = new Pagina(2, "Estática", 190000, "Medio", "Sencilla")
-
-const arrayPaginas = [ecommerce, elearning, estatica]
 
 
-arrayPaginas.forEach((item) => {
-    const divProducto = document.createElement("div")
-    divProducto.classList.add("pagina-presupuesto")
-
-    divProducto.innerHTML = `<h3>${item.nombre}</h3>
-                    <p><strong>Precio:$</strong> ${item.precio}</p>
-                    <p><strong>Tiempo:</strong> ${item.tiempo}</p>
-                    <p><strong>Complejidad:</strong> ${item.complejidad}</p>
-                    <p>Agregar al carrito</p>
-                    <button id = "producto-${item.id}" class="btn-agregar"><i id = "producto-${item.id}"  class="fa-solid fa-cart-shopping"></i></button>
-                    `
-    paginasContainer.append(divProducto)
-})
-
-
-
-// ----------------------------MODAL---------------------------
+// --------------------MODAL---------------------------
 
 const modalCont = document.querySelector("#modal-cont")
 const openModal = document.querySelector("#carrito")
@@ -45,83 +13,126 @@ openModal.addEventListener("click", () => {
 closeModal.addEventListener("click", () => {
     modalCont.classList.remove("modal-cont--abierto")
 })
-
-//----------------------------PRODUCTOS EN EL CARRITO-------------------
-
-const carrito = []
-const carritoParaEliminar = []
-const productosContainer = document.querySelector("#productos-cont")
-const agregarProducto = document.getElementsByClassName("btn-agregar")
+// --------------------MODAL---------------------------
 
 
+// --------------------SERVICIOS-----------------------
+const item = servicios [0]
+
+servicios.forEach(item => {
+    const serviciosContainer = document.querySelector("#pag-disponibles")
+    const servicio = document.createElement("div")
 
 
+    servicio.classList.add("pagina-presupuesto")
+    servicio.innerHTML = `<h3>${item.nombre}</h3>
+                        <p><strong>Precio:$</strong> ${item.precio}</p>
+                        <p><strong>Tiempo:</strong> ${item.tiempo}</p>
+                        <p><strong>Complejidad:</strong> ${item.complejidad}</p>
+                        <p>Agregar al carrito</p>
+                        <button onclick="agregarAlCarrito(${item.id})" class="btn-agregar"><i class="fa-solid fa-cart-shopping"></i></button>`
 
-for(let i = 0 ; i < agregarProducto.length ; i++){
-    
-    agregarProducto[i].addEventListener("click", (e) => {
+    serviciosContainer.append(servicio)
+})
 
-        let idProd = Number(e.target.id.split("-")[1])
+// --------------------SERVICIOS-----------------------
 
-        const producto = buscarProducto(idProd)
+// --------------------CARRITO-------------------------
+let carritoDeServicios = []
+const contenederDeServicios = document.querySelector("#productos-cont")
 
-        const productoCarrito = document.createElement("div")
-        productoCarrito.classList.add("producto-carrito")
-    
-        productoCarrito.innerHTML = `<h4>${producto.nombre}</h4>
-                                    <p>Precio $:${producto.precio}</p>
-                                    <button onclick="eliminarDelCarrito()" class = "eliminar-prod">X</button>`
-        productosContainer.append(productoCarrito)
-        carrito.push(producto.precio)
-        carritoParaEliminar.push(productoCarrito)
-        console.log(carritoParaEliminar)
+function agregarAlCarrito(id) {
 
-        calcularTotal()
-    
-        Toastify({
-            text: `Tu producto ${producto.nombre} se agregó correctamente`,
-            duration: 2500,
-            style: {
-                color: "#000",
-                border: "solid 2px #fff",
-                background: "#ff7c00",
-            }
-        }).showToast();
-    }) 
+    const itemParaAgregar = servicios.find( (servicio) => servicio.id === id )
+    carritoDeServicios.push(itemParaAgregar)
+
+    renderizarCarrito()
+    calcularPrecioTotal()
+    console.log(carritoDeServicios)
+
+    Toastify({
+        text: `Tu producto ${itemParaAgregar.nombre} se agregó correctamente`,
+        duration: 2500,
+        style: {
+            color: "#000",
+            border: "solid 2px #fff",
+            background: "#ff7c00",
+        }
+    }).showToast();
+
 }
 
-const buscarProducto = (idProd) => {
-    const prod = arrayPaginas.filter (identificador => identificador.id == idProd)
-    return prod [0]
+function renderizarCarrito() {
+
+    contenederDeServicios.innerHTML = ``
+
+    carritoDeServicios.forEach((item) => {
+        const servicioVisual = document.createElement("div")
+        servicioVisual.classList.add("producto-carrito")
+        servicioVisual.innerHTML = `<h4>${item.nombre}</h4>
+                                    <p>Precio $:${item.precio}</p>
+                                    <button onclick="eliminarServicio(${item.id})" class = "eliminar-prod">X</button>`
+
+
+        contenederDeServicios.append(servicioVisual)
+    })
 }
 
+// ----------------CALCULAR TOTAL----------------------
 const precioTotal = document.querySelector("#precioTotal")
 
-const calcularTotal = () => {
-    let total = 0;
+function calcularPrecioTotal() {
 
-    carrito.forEach((precio) => {
-
-        total += precio
+    let total = 0
+    
+    carritoDeServicios.forEach((servicio) => {
+        total += servicio.precio
     })
-
+    
     precioTotal.innerText = total
-}
-
-const eliminarDelCarrito = (id) => {
     
-    const ite = carritoParaEliminar.find((producto) => producto.id === id)
-    const indice = carritoParaEliminar.indexOf(ite)
-    carritoParaEliminar.splice(indice, 1)
-    console.log(carritoParaEliminar)
-    
-    buscarProducto()
-
- 
-
 }
+// ----------------CALCULAR TOTAL----------------------
+
+function eliminarServicio(id){
+    const itemParaEliminar = carritoDeServicios.find((servicio) => servicio.id === id)
+    const indiceServicio = carritoDeServicios.indexOf(itemParaEliminar)
+    carritoDeServicios.splice(indiceServicio, 1)
+
+    renderizarCarrito()
+    calcularPrecioTotal()
+
+    Toastify({
+        text: `Tu servicio de ${itemParaEliminar.nombre} fue eliminado`,
+        duration: 2500,
+        style: {
+            color: "#000",
+            border: "solid 2px #fff",
+            background: "#ff7c00",
+        }
+    }).showToast();
+}
+    
+
+const btnVaciarCarrito = document.querySelector("#vaciar-carrito")
 
 function vaciarCarrito () {
 
+    carritoDeServicios = []
+    renderizarCarrito()
+    calcularPrecioTotal()
+
+    Toastify({
+        text: `Carrito vaciado =(`,
+        duration: 2500,
+        style: {
+            color: "#000",
+            border: "solid 2px #fff",
+            background: "#ff7c00",
+        }
+    }).showToast();
+
 }
 
+btnVaciarCarrito.addEventListener("click", vaciarCarrito)
+// --------------------CARRITO-------------------------

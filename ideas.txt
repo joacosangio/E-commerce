@@ -1,0 +1,11 @@
+IDEAS:
+
+    SCSS:
+        *Efecto de scrollear (Ver varios videos)
+        *Agregar libreria animate.css (Investigarla y leer documentacion)
+
+
+    JS:
+        *Hacer panel o vista de usuario registrado
+
+

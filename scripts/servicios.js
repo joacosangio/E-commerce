@@ -17,33 +17,45 @@ closeModal.addEventListener("click", () => {
 
 
 // --------------------SERVICIOS-----------------------
-const item = servicios [0]
 
-servicios.forEach(item => {
-    const serviciosContainer = document.querySelector("#pag-disponibles")
-    const servicio = document.createElement("div")
+let stockServicios = []
 
+fetch("/scripts/stock.json")
+    .then((resp) => resp.json())
+    .then((info) => {
+        
+        stockServicios = info
+    
+        stockServicios.forEach(item => {
+            const serviciosContainer = document.querySelector("#pag-disponibles")
+            const servicio = document.createElement("div")
+        
+        
+            servicio.classList.add("pagina-presupuesto")
+            servicio.innerHTML = `<h3>${item.nombre}</h3>
+                                <p><strong>Precio:$</strong> ${item.precio}</p>
+                                <p><strong>Tiempo:</strong> ${item.tiempo}</p>
+                                <p><strong>Complejidad:</strong> ${item.complejidad}</p>
+                                <p>Agregar al carrito</p>
+                                <div>
+                                <button onclick="agregarAlCarrito(${item.id})" class="btn-agregar"><i class="fa-solid fa-cart-shopping"></i></button>
+                                <button onclick="mostrarInfo(${item.id})" class="btn-informacion"><i class="fa-solid fa-circle-question"></i></button>
+                                </div>`
+        
+            serviciosContainer.append(servicio)
+        })
+    })
 
-    servicio.classList.add("pagina-presupuesto")
-    servicio.innerHTML = `<h3>${item.nombre}</h3>
-                        <p><strong>Precio:$</strong> ${item.precio}</p>
-                        <p><strong>Tiempo:</strong> ${item.tiempo}</p>
-                        <p><strong>Complejidad:</strong> ${item.complejidad}</p>
-                        <p>Agregar al carrito</p>
-                        <button onclick="agregarAlCarrito(${item.id})" class="btn-agregar"><i class="fa-solid fa-cart-shopping"></i></button>`
-
-    serviciosContainer.append(servicio)
-})
 
 // --------------------SERVICIOS-----------------------
 
 // --------------------CARRITO-------------------------
-let carritoDeServicios = []
+let carritoDeServicios = [0]
 const contenederDeServicios = document.querySelector("#productos-cont")
 
 function agregarAlCarrito(id) {
 
-    const itemParaAgregar = servicios.find( (servicio) => servicio.id === id )
+    const itemParaAgregar = stockServicios.find( (servicio) => servicio.id === id )
     carritoDeServicios.push(itemParaAgregar)
 
     renderizarCarrito()
@@ -138,6 +150,28 @@ function vaciarCarrito () {
 }
 
 btnVaciarCarrito.addEventListener("click", vaciarCarrito)
+
+
+function mostrarInfo() {
+    
+    stockServicios.forEach((serv) => {
+
+        Swal.fire( {
+            icon: "info",
+            title: `¿Que es un ${serv.nombre} ?`,
+            text: `${serv.descripcion}`,
+            showCloseButton: true,
+                  color: "#fff",
+                  background: "#000",
+                  allowEscapeKey: true,
+                  allowEnterKey: true,
+            iconColor: "#ff7c00",
+            confirmButtonColor: "#ff7c00",
+        })
+
+    })
+
+}
 
 
 // --------------------CARRITO-------------------------

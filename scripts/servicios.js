@@ -57,6 +57,7 @@ function agregarAlCarrito(id) {
             color: "#000",
             border: "solid 2px #fff",
             background: "#ff7c00",
+            borderRadius: "20px",
         }
     }).showToast();
 
@@ -109,6 +110,7 @@ function eliminarServicio(id){
             color: "#000",
             border: "solid 2px #fff",
             background: "#ff7c00",
+            borderRadius: "20px",
         }
     }).showToast();
 }
@@ -129,10 +131,13 @@ function vaciarCarrito () {
             color: "#000",
             border: "solid 2px #fff",
             background: "#ff7c00",
+            borderRadius: "20px",
         }
     }).showToast();
 
 }
 
 btnVaciarCarrito.addEventListener("click", vaciarCarrito)
+
+
 // --------------------CARRITO-------------------------

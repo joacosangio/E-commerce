@@ -306,7 +306,9 @@ footer p {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  border: 2px solid #fff;
+  box-shadow: 2px 3px 8px #fff; }
 
 .modal h4 {
   text-align: center;
@@ -328,9 +330,12 @@ footer p {
 
 .productos-cont {
   width: 100%;
-  height: 250px;
-  border: #000 2px solid;
+  height: fit-content;
   border-radius: 1em; }
+
+.marco-cont-visible {
+  border: 2px solid #000;
+  overflow: visible; }
 
 #vaciar-carrito {
   color: #fff;
@@ -380,7 +385,10 @@ footer p {
   flex-direction: row;
   text-align: center;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+  border: 2px solid #000;
+  border-radius: 1em;
+  margin: 1em; }
 
 .producto-carrito p {
   color: #000; }

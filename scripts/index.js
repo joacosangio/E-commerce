@@ -34,12 +34,6 @@ btnLinkedin.addEventListener("click", (e) => {
               background: "#000",
               allowEscapeKey: true,
               allowEnterKey: true,
-              showClass: {
-                popup: 'animate__animated animate__fadeInDown'
-              },
-              hideClass: {
-                popup: 'animate__animated animate__fadeOutUp'
-              }
           })
           
     },0)

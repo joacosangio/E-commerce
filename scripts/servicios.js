@@ -20,7 +20,7 @@ closeModal.addEventListener("click", () => {
 
 let stockServicios = []
 
-fetch('stock.json')
+fetch('./stock.json')
     .then((resp) => resp.json())
     .then((info) => {
         

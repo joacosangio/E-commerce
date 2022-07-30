@@ -20,7 +20,7 @@ closeModal.addEventListener("click", () => {
 
 let stockServicios = [0]
 
-fetch("./scripts/stock.json")
+fetch("/stock.json")
     .then((resp) => resp.json())
     .then((info) => {
         
@@ -74,7 +74,7 @@ function agregarAlCarrito(id) {
 
 }
 
-function renderizarCarrito() {
+const renderizarCarrito = () => {
 
     contenederDeServicios.innerHTML = ``
 

@@ -47,12 +47,12 @@ function registro() {
     userEmail.push(email.value)
     userTelefono.push(telefono.value)
 
-    localStorage.setItem("Nombre del usuario:", userNombre)
-    localStorage.setItem("Apellido del usuario:", userApellido)
-    localStorage.setItem("DNI del usuario:", userDni)
-    localStorage.setItem("Nacionalidad del usuario:", userNacionalidad)
-    localStorage.setItem("Email del usuario:", userEmail)
-    localStorage.setItem("Telefono del usuario:", userTelefono)
+    localStorage.setItem("Nombre del usuario:", JSON.stringify(userNombre))
+    localStorage.setItem("Apellido del usuario:", JSON.stringify(userApellido))
+    localStorage.setItem("DNI del usuario:", JSON.stringify(userDni))
+    localStorage.setItem("Nacionalidad del usuario:", JSON.stringify(userNacionalidad))
+    localStorage.setItem("Email del usuario:", JSON.stringify(userEmail))
+    localStorage.setItem("Telefono del usuario:", JSON.stringify(userTelefono))
     Swal.fire({
         icon: "success",
         iconColor: "#000",

@@ -30,9 +30,8 @@ fetch('../stock.json')
             const serviciosContainer = document.querySelector("#pag-disponibles")
             const servicio = document.createElement("div")
         
-        
             servicio.classList.add("pagina-presupuesto")
-            servicio.innerHTML = `<h3>${item.nombre}</h3>
+            servicio.innerHTML = `<h3 class="animate__animated animate__fadeInDown animate__delay-0.8s">${item.nombre}</h3>
                                 <p><strong>Precio:$</strong> ${item.precio}</p>
                                 <p><strong>Tiempo:</strong> ${item.tiempo}</p>
                                 <p><strong>Complejidad:</strong> ${item.complejidad}</p>

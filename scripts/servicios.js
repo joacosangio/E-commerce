@@ -150,9 +150,9 @@ function vaciarCarrito () {
 btnVaciarCarrito.addEventListener("click", vaciarCarrito)
 
 
-function mostrarInfo() {
+function mostrarInfo(id) {
     
-    stockServicios.forEach((serv) => {
+    const serv = stockServicios.find((serv) => serv.id === id)
     
         Swal.fire( {
             icon: "info",
@@ -167,7 +167,6 @@ function mostrarInfo() {
             confirmButtonColor: "#ff7c00",
         })
 
-    })
 
 }
 
